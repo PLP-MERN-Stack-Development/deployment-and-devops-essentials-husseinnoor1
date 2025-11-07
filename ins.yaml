@@ -1,0 +1,17 @@
+name: CD
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Deploy backend using Render CLI or Heroku CLI"
+
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Deploy frontend using Vercel CLI or Netlify CLI"
